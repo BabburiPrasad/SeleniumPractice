@@ -1,40 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="FirefoxTest(failed)">
-    <parameter name="browser" value="Firefox"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testng.CrossBrowserTesting">
+      <class name="com.dataprovider.TestDDT">
         <methods>
-          <include name="browserSetup"/>
-          <include name="login"/>
-          <include name="tearDown"/>
+          <include name="login" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- com.testng.CrossBrowserTesting -->
+      </class> <!-- com.dataprovider.TestDDT -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
-  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="com.testng.CrossBrowserTesting">
-        <methods>
-          <include name="browserSetup"/>
-          <include name="login"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.testng.CrossBrowserTesting -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-  <test thread-count="2" parallel="tests" name="EdgeTest(failed)">
-    <parameter name="browser" value="Edge"/>
-    <classes>
-      <class name="com.testng.CrossBrowserTesting">
-        <methods>
-          <include name="browserSetup"/>
-          <include name="login"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.testng.CrossBrowserTesting -->
-    </classes>
-  </test> <!-- EdgeTest(failed) -->
-</suite> <!-- Failed suite [TestSuite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

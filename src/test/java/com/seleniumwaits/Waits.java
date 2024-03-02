@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -50,6 +51,7 @@ public class Waits {
 		
 		driver.findElement(By.xpath("//img[@class='_8idr img']")).click();
 		
+		
 		forgotlink = driver.findElement(By.linkText("Forgotten password?"));
 		
 		clickOn(driver, forgotlink, 10);
@@ -75,4 +77,11 @@ public class Waits {
 //		element.sendKeys(value);	
 //	}
 
+	 
+//	 WebElement forgotlink1 = new WebDriverWait(driver,Duration.ofSeconds(10))
+//             .until(ExpectedConditions.presenceOfElementLocated(By.linkText("Forgotten password?")));
+//	 
+	 
+	 
+	 
 }
